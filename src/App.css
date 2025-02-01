@@ -1,0 +1,408 @@
+ 
+
+
+
+
+/* Navbar Styles */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px lightgrey;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
+.navbar__heading
+{
+  color:#663051 ;
+  margin-left: 2%;
+}
+/* Side Navbar */
+.side__navbar__items {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 200px;
+  height: 100vh;
+  background-color:lightgrey;
+  color: black;
+  font-weight: 600;
+  z-index: 1;
+  padding: 4%;
+  transition: left 0.7s ease-in-out;
+}
+
+.side__navbar__items.show {
+  left: 0; /* Slide into view */
+}
+
+.menu__icon
+{
+  padding-right: 20px;
+}
+.navbar-items {
+ 
+  display: none;
+  justify-content: space-between;
+  gap: 4%;
+  margin-top: 10px;
+  margin-right: 4%;
+  width: 40%;
+  font-weight: 600;
+  
+}
+
+.navbar-items p ,.side__navbar__items p{
+  cursor: pointer;
+}
+a{
+ text-decoration: none; 
+}
+
+.navbar-search {
+  display: flex;
+  display: none;
+  width: 400px;
+  border: solid lightgrey 2px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.navbar__search__input {
+  border: none;
+  font-size: 1.5vw;
+  padding: 10px;
+  outline: none;
+  width: 85%;
+}
+
+.navbar__link__catogories {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px; 
+}
+
+.categories__dropdown {
+  position: absolute;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 100;
+  /* Smooth slide-down effect */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
+}
+
+/* Show dropdown when .show class is added */
+.categories__dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.selected {
+  font-weight: bold;
+  color: red;
+}
+
+
+/* Home Page */
+.home__img__container
+{
+  display: flex;
+  gap:1%;
+  margin-top: 4%;
+  
+  flex-wrap: wrap;
+  padding:4%;
+  background-color: rgb(237, 237, 237);
+}
+
+.image__home
+{
+  width:100%
+}
+.home__img
+{
+  position: relative; 
+  border-radius: 10px;
+  height:400px;
+}
+.home__img:hover
+{
+  opacity: 0.5;
+  cursor: pointer;
+}
+.home__dish__button
+{
+ padding:5%;
+ border-radius: 10px;
+border:none;
+cursor: pointer;
+width:50%;
+left:25%;
+bottom:10%;
+ position: absolute;
+ z-index:0;
+ background-color: orange;
+ color: white;
+}
+.home__brands
+{
+  display: flex;
+ color: rgb(66, 20, 20);
+ font-size: 2vw;
+ cursor: pointer;
+ align-items: center;
+ font-weight: 600;
+  justify-content: space-around;
+}
+
+/* Countryspl .JSX */
+
+.meals__container{
+  display: flex;
+  margin: 2%;
+  flex-wrap: wrap;
+  padding:2%;
+  gap:2%;
+}
+.countrymeals__img__container
+{
+  width:250px;
+flex-basis: 40%;
+flex-grow: 1;
+  border:solid lightgray 1px;
+  margin-top: 1%;
+  border-radius: 10px;
+ 
+  text-align: center;
+}
+.countryspl__foodName{
+  border:none;
+  background-color: white;
+  font-weight: 700;
+ font-size: 20px;
+  padding:2%;
+  margin-top:2%;
+  cursor: pointer;
+}
+.countrymeals__img{
+ border-radius: 10px;
+  width:100%;
+}
+.countrymeals__img:hover{
+  border-radius: 10px;
+   width:100%;
+   opacity: 0.5;
+   cursor: pointer;
+ }
+.country__cover__img{
+  width: 100%;
+  height:60vh;
+  margin-top: 3%;
+}
+
+
+/* Search && dishes COmponent */
+
+.food__receipe__container
+{
+  width:100%;
+  border:solid lightgray 1px;
+  margin:1%;
+  display: flex;
+  gap:8%;
+  padding: 1%;
+  flex-direction: column;
+}
+
+.food__img
+{
+  border-radius: 10px;
+  width:100%;
+  height: 250px;
+  justify-self: center;
+  
+
+}
+.desc__container
+{
+  width:100%;
+  padding-left: 3%;
+  
+}
+
+/* Recipe Page  */
+.recipe__page
+{
+  margin-top: -5%;
+  margin-bottom: 53%;
+}
+.recipe__page__heading
+{
+  font-size: 50px;
+}
+.recipe__page__img
+{
+  margin-top: 3%;
+  width:80%;
+  height:60vh;
+  margin-left: 10%;
+}
+.recipe__page__content
+{
+  color:grey;
+  margin-bottom:7%;
+  font-size: 20px;
+}
+.recipe__page__ingredientContainer
+{
+  border:solid #734060 5px;
+ padding-bottom: 2%;
+  width: 100%;
+ justify-self: center;
+  font-size:20px;
+}
+.recipe__page__ingredientContainer1
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.recipe__page__ingredientContainer li
+{
+margin-left: 20px;
+color: #734060;
+}
+/* footer  page*/
+
+
+/* Footer.css */
+
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.footer-links ul, .footer-social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li, .footer-social li {
+  margin: 8px 0;
+}
+
+.footer-links a, .footer-social a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+  color: #f39c12;
+}
+
+.footer-bottom {
+  background-color: #34495e;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  color: #bdc3c7;
+}
+
+iframe
+{
+  height:10%
+}
+
+@media screen and (min-width: 600px) {
+  .food__img
+  {
+    border-radius: 10px;
+    width:130%;
+    height:300px;
+  }
+  .desc__container
+{
+  width:100%;
+ 
+}
+iframe{
+  height: 20%;
+}
+.menu__icon
+{
+  display: none;
+  cursor: pointer;
+}
+  .food__receipe__container
+  {
+    width:100%;
+    border:solid lightgray 1px;
+    margin:1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .navbar-items ,.navbar-search
+  {
+    display: block;
+    display: flex;
+  }
+  .countrymeals__img__container,.countrymeals__img__container
+  {
+    flex-grow: 1;
+    flex-basis: 20%;
+    font-size: 20px;
+  }
+  .recipe__page__ingredientContainer
+{
+ 
+  width: 50%;
+ 
+}
+.image__home__container
+{
+  display: flex;
+}
+.image__home
+{
+  width: 50%;
+}
+}
+
+/* Filter Pages */
+.filter__options
+{
+
+  align-items: center;
+  margin: 2%;
+}
+.recipe__page
+{
+  margin-bottom: 22%;
+}
